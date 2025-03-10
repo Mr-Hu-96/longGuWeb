@@ -1,9 +1,9 @@
 {
-  "title": "演示",
+  "title": "咨询",
   "antd": "Ant Design Vue",
   "vben": {
     "title": "项目",
-    "about": "关于",
+    "about": "监管",
     "document": "文档",
     "antdv": "Ant Design Vue 版本",
     "naive-ui": "Naive UI 版本",

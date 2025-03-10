@@ -9,5 +9,24 @@ export const overridesPreferences = defineOverridesPreferences({
   // overrides
   app: {
     name: import.meta.env.VITE_APP_TITLE,
+    contentCompact: 'compact',
+    layout: 'header-nav',
+    // enablePreferences: false,
+  },
+  footer: {
+    enable: true,
+  },
+  header: {
+    menuAlign: 'center',
+  },
+  tabbar: {
+    enable: false,
+  },
+  theme: {
+    mode: 'light',
+  },
+  widget: {
+    languageToggle: false,
+    refresh: false,
   },
 });
