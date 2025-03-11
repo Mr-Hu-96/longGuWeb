@@ -1,12 +1,18 @@
 <script lang="ts" setup>
 import type { NotificationItem } from '@vben/layouts';
 
-import { computed, ref, watch } from 'vue';
+import { computed, h, ref, watch } from 'vue';
 
 import { AuthenticationLoginExpiredModal } from '@vben/common-ui';
 import { VBEN_DOC_URL, VBEN_GITHUB_URL } from '@vben/constants';
 import { useWatermark } from '@vben/hooks';
-import { BookOpenText, CircleHelp, MdiGithub } from '@vben/icons';
+import {
+  BookOpenText,
+  CircleHelp,
+  IconamoonEditLight,
+  MdiGithub,
+  MingcuteVip,
+} from '@vben/icons';
 import {
   BasicLayout,
   LockScreen,
@@ -16,6 +22,8 @@ import {
 import { preferences } from '@vben/preferences';
 import { useAccessStore, useUserStore } from '@vben/stores';
 import { openWindow } from '@vben/utils';
+
+import { Button } from 'ant-design-vue';
 
 import { $t } from '#/locales';
 import { useAuthStore } from '#/store';
@@ -141,6 +149,20 @@ watch(
         @clear="handleNoticeClear"
         @make-all="handleMakeAll"
       />
+      <Button size="small" class="mr-2">
+        <template #icon> <IconamoonEditLight color="#5f90ea" /></template> 发帖
+      </Button>
+      <Button
+        size="small"
+        type="primary"
+        :icon="
+          h(MingcuteVip, {
+            color: '#ffc423',
+          })
+        "
+      >
+        会员中心
+      </Button>
     </template>
     <template #extra>
       <AuthenticationLoginExpiredModal

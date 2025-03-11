@@ -24,6 +24,7 @@ export const overridesPreferences = defineOverridesPreferences({
   },
   theme: {
     mode: 'light',
+    // semiDarkHeader: true,
   },
   widget: {
     languageToggle: false,
